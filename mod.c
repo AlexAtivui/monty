@@ -2,7 +2,7 @@
 
 /**
 * f_mod - Computes the remainder of the division of the second
-* top element of the stack.
+* top element of the stack by the top element of the stack.
 * @head: Double pointer to the stack (head).
 * @counter: The line number in the file.
 *
@@ -46,4 +46,3 @@ h->next->n = aux;
 *head = h->next;
 free(h);
 }
-

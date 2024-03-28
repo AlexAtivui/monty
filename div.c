@@ -2,10 +2,8 @@
 
 /**
  * f_div - Divides the top two elements of the stack.
- * @head: Double pointer to the stack (head).
+ * @head: stack head
  * @counter: The line number in the file.
- *
- * Return: No return value.
  */
 void f_div(stack_t **head, unsigned int counter)
 {
@@ -18,7 +16,6 @@ void f_div(stack_t **head, unsigned int counter)
 		h = h->next;
 		len++;
 	}
-
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
@@ -44,4 +41,3 @@ void f_div(stack_t **head, unsigned int counter)
 	*head = h->next;
 	free(h);
 }
-
