@@ -32,12 +32,11 @@ fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 exit(EXIT_FAILURE);
 }
 
-while (read_line > 0)
+for (; read_line > 0; counter++)
 {
 content = NULL;
 read_line = getline(&content, &size, file);
 bus.content = content;
-counter++;
 
 if (read_line > 0)
 {
@@ -48,6 +47,5 @@ free(content);
 
 free_stack(stack);
 fclose(file);
-return (EXIT_SUCCESS);
+return (0);
 }
-
